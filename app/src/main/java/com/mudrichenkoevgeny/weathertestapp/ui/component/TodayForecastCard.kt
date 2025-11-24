@@ -19,6 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -71,7 +72,7 @@ fun TodayForecastCardUI(
 }
 
 @Composable
-private fun TodayForecastHourItem(hour: ForecastHour) {
+fun TodayForecastHourItem(hour: ForecastHour) {
     val context = LocalContext.current
 
     Column(
@@ -81,7 +82,8 @@ private fun TodayForecastHourItem(hour: ForecastHour) {
                 color = MaterialTheme.colorScheme.surface,
                 shape = RoundedCornerShape(12.dp)
             )
-            .padding(6.dp),
+            .padding(6.dp)
+            .testTag("TodayHourItem"),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 

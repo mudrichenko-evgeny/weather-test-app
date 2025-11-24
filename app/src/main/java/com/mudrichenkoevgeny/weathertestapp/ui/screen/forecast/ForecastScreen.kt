@@ -49,7 +49,7 @@ import com.mudrichenkoevgeny.weathertestapp.ui.theme.AppTheme
 
 @Composable
 fun ForecastScreen(
-    viewModel: ForecastViewModel
+    viewModel: ForecastViewModelContract
 ) {
     val showErrorDialogEvent: MutableState<ForecastUiEvent.ShowErrorDialog?> =
         remember { mutableStateOf(null) }

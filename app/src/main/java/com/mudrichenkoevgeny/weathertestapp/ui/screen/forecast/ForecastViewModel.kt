@@ -17,15 +17,15 @@ import javax.inject.Inject
 @HiltViewModel
 class ForecastViewModel @Inject constructor(
     private val forecastRepository: ForecastRepository
-) : ViewModel() {
+) : ViewModel(), ForecastViewModelContract {
 
     private val _uiState = MutableStateFlow<ForecastUiState>(ForecastUiState.Loading)
-    val uiState: StateFlow<ForecastUiState> = _uiState.asStateFlow()
+    override val uiState: StateFlow<ForecastUiState> = _uiState.asStateFlow()
 
     private val _uiEvent = MutableSharedFlow<ForecastUiEvent>()
-    val uiEvent: SharedFlow<ForecastUiEvent> = _uiEvent.asSharedFlow()
+    override val uiEvent: SharedFlow<ForecastUiEvent> = _uiEvent.asSharedFlow()
 
-    fun loadForecast() {
+    override fun loadForecast() {
         viewModelScope.launch {
             _uiState.value = ForecastUiState.Loading
 

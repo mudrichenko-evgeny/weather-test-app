@@ -9,7 +9,6 @@ sealed class AppError {
     object Unknown : AppError()
 }
 
-
 @Composable
 fun AppError.toText(): String {
     return when (this) {
