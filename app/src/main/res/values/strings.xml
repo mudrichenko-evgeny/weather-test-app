@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Weather Test App</string>
+
+    <string name="app_error_no_internet">No internet connection</string>
+    <string name="app_error_unknown">Unknown error</string>
+
+    <string name="forecast_wind_title">Wind: %s km/h</string>
+    <string name="forecast_precipitation_title">Rain: %s mm</string>
+    <string name="forecast_wind_short">%s km/h</string>
+    <string name="forecast_precipitation_short">%s mm</string>
+    <string name="forecast_temperature_short">%s°C</string>
+    <string name="forecast_hourly">Hourly</string>
+    <string name="forecast_daily">Daily</string>
+
+    <string name="refresh">Refresh</string>
+    <string name="loading_in_progress">Loading...</string>
+</resources>
